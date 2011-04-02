@@ -11,6 +11,10 @@ $_CONF = array();
 // Store the vowels, or other characters that we want to break up words with
 $_CONF['vowels'] = 'aeiou';
 
+// We need to store the various different endings for different dialects
+$_CONF['vowel_endings'] = array('ay','yay','way','hey');
+$_CONF['vowelending'] = $_CONF['vowel_endings'][1];
+
 // Store a set of other rules that we can use to split words
 $_CONF['additional'] = 'qu';
 

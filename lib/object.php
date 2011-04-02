@@ -8,7 +8,6 @@
 class Object {
 
     function __autoload($c){
-        strtolower($c);
         include_once('lib/'.$c);
     }
 

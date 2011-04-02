@@ -1,0 +1,82 @@
+/* 
+    Document   : style
+    Created on : 12-Nov-2010, 09:53:41
+    Author     : david.yell
+    Description:
+        Creates styles and layout for application
+*/
+#wrapper{
+    width: 960px;
+    margin: 0 auto;
+    font: 12px Arial, sans-serif;
+}
+h1, h2, h3, h4, h5{
+    font-family: Tahoma, Arial, sans-serif;
+}
+h1{
+    font-size: 28px;
+}
+h2{
+    font-size: 0.8em;
+}
+h3{
+    font-size: 0.6em;
+}
+.formrow{
+    margin: 10px 0;
+}
+.formrow.result{
+    width: 400px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #efefef;
+}
+.formrow label{
+    display: block;
+    margin: 3px 0;
+}
+.formrow input{
+    font-family: Arial, sans-serif;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    padding: 2px;
+}
+.formrow.submit input{
+    padding: 5px 10px;
+}
+.formrow.submit input:hover{
+    border: 1px solid #8EB8CF;
+    text-shadow: 0 1px 1px #8EB8CF;
+}
+#result{
+    font-weight: bold;
+}
+.loading{
+    display: none;
+    padding: 5px 5px 5px 55px;
+    background: url(../images/ajax-loader.gif) no-repeat center left;
+}
+
+/** Messages **/
+.info, .success, .warning, .error, .validation {
+    border: 1px solid;
+    margin: 10px 0px;
+    padding:15px 10px 15px 20px;
+}
+.info {
+    color: #00529B;
+    background-color: #BDE5F8;
+}
+.success {
+    color: #4F8A10;
+    background-color: #DFF2BF;
+}
+.warning {
+    color: #9F6000;
+    background-color: #FEEFB3;
+}
+.error {
+    color: #D8000C;
+    background-color: #FFBABA;
+}

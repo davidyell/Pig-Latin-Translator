@@ -3,13 +3,16 @@
 /**
  * Validate certain inputs and make them safe
  *
- * This will combine some Validation and some Sanitization, the destinction between 'wrong' input and 'dangerous' input
- * would determine the class seperation here, unless you wanted to implement your validation rules in your sanitization
- * then I would use Static methods to class Validate in Sanitize, but allowing both to function independantly
- *
  * @author Neon
  */
 class Validate extends Object{
+
+    function __autoload(){
+        include_once('lib/validate.php');
+    }
+
+    // Store any validation errors
+    public $error = '';
 
     /**
      * Check to see if something is letters
@@ -31,6 +34,26 @@ class Validate extends Object{
      */
     public function changeCase($input){
         return strtolower($input);
+    }
+
+    /**
+     * Ensure that there is something to translate
+     * @param string $input
+     * @return boolean
+     */
+    public function isOkay($input){
+        // Make sure it's not empty
+        if(empty($input)){
+            $this->error = 'Please enter some text to translate';
+            return false;
+        }
+        // Ensure there are some letters
+        if(!$this->isWord($input)){
+            $this->error = 'Please enter some words';
+            return false;
+        }
+
+        return true;
     }
 
 }
