@@ -36,5 +36,14 @@ class Sanitize {
         }
     }
 
+    /**
+     * Remove the punctiation to avoid things like oday?-tay
+     * @param <string> $input
+     * @return <string>
+     */
+    function removePunctuation($input){
+        return preg_replace("/[^\w\s]/", '', $input);
+    }
+
 }
 ?>

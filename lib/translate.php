@@ -34,7 +34,8 @@ class Translate extends Rules{
 
             // Sanitize
             $clean = new Sanitize();
-            $clean->removeCode($input);
+            $input = $clean->removeCode($input);
+            $input = $clean->removePunctuation($input);
 
             // Get a list of words
             $this->wordlist = explode(' ', $input);
