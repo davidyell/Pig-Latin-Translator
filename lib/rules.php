@@ -5,7 +5,7 @@
  *
  * @author Neon
  */
-class Rules extends Object{
+class Rules{
 
     function __autoload(){
         include_once('lib/rules.php');

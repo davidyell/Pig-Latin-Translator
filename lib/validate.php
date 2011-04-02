@@ -5,7 +5,7 @@
  *
  * @author Neon
  */
-class Validate extends Object{
+class Validate{
 
     function __autoload(){
         include_once('lib/validate.php');
